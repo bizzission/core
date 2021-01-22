@@ -3,6 +3,8 @@
 namespace Amethyst\Core\Providers;
 
 use Doctrine\Inflector\Inflector;
+use Doctrine\Inflector\InflectorFactory;
+use Doctrine\Inflector\Language;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
@@ -123,7 +125,9 @@ class CommonServiceProvider extends ServiceProvider
     public function getPackageName()
     {
         $reflection = new \ReflectionClass($this);
-        $inflector = new Inflector();
+//        $inflector = new Inflector();
+
+        $inflector = InflectorFactory::createForLanguage(Language::SPANISH)->build();
 
         return str_replace('_', '-', $inflector->tableize(str_replace('ServiceProvider', '', $reflection->getShortName())));
     }

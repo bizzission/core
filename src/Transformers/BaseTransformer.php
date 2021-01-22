@@ -3,7 +3,7 @@
 namespace Amethyst\Core\Transformers;
 
 use Amethyst\Core\Contracts\TransformerContract;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;

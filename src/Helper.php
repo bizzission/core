@@ -3,7 +3,7 @@
 namespace Amethyst\Core;
 
 use Amethyst\Core\Exceptions\DataNotFoundException;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Arr;
@@ -237,9 +237,9 @@ class Helper implements CacheableContract
      *
      * @param string $class
      *
-     * @return string
+     * @return string|null
      */
-    public function getNameDataByModel(string $class): string
+    public function getNameDataByModel(string $class): ?string
     {
         return class_exists($class) ? $this->tableize($class) : null;
     }

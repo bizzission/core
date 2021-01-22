@@ -3,7 +3,7 @@
 namespace Amethyst\Core\Http\Controllers;
 
 use Amethyst\Core\Transformers\BaseTransformer;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
