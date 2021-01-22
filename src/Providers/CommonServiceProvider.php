@@ -127,7 +127,7 @@ class CommonServiceProvider extends ServiceProvider
         $reflection = new \ReflectionClass($this);
 //        $inflector = new Inflector();
 
-        $inflector = InflectorFactory::createForLanguage(Language::SPANISH)->build();
+        $inflector = InflectorFactory::createForLanguage(Language::ENGLISH)->build();
 
         return str_replace('_', '-', $inflector->tableize(str_replace('ServiceProvider', '', $reflection->getShortName())));
     }
