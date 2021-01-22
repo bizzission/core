@@ -2,7 +2,7 @@
 
 namespace Amethyst\Core\Providers;
 
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
